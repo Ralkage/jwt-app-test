@@ -81,7 +81,7 @@ app.post("/api/login", (req, res) => {
 })
 
 // Endpoint for refreshing access token
-app.post("/api/refresh-token", verifyToken, (req, res) => {
+app.post("/api/refresh-token", (req, res) => {
   const { refreshToken } = req.body
 
   // Verify the refresh token
